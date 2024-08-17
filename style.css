@@ -78,10 +78,10 @@ button.igual:hover{
     transform: scale(1.05); 
 }
 
-@media (max-width: 1080px) and (max-height: 425px) {
+@media (max-width: 1080px) {
     main {
         width: 90%; 
-        max-width: 350px; 
+        max-width: 350px;
     }
     
     .resultado {
@@ -91,12 +91,36 @@ button.igual:hover{
     
     .operacao, .numeros {
         gap: 8px; 
-        padding: 10px; 
+        padding: 15px;
     }
-
+    
     button {
         font-size: 20px; 
         padding: 20px; 
+    }
+}
+
+@media (max-height: 425px) {
+    main {
+        height: 70%; 
+        max-height: 300px;
+        width: 90%; 
+        max-width: 350px;
+    }
+    
+    .resultado {
+        padding: 15px; 
+        font-size: 20px; 
+    }
+    
+    .operacao, .numeros {
+        gap: 5px; 
+        padding: 10px; 
+    }
+    
+    button {
+        font-size: 18px; 
+        padding: 15px; 
     }
 }
 
