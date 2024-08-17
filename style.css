@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: nome;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+main{
+    width: 350px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; 
+}
+
+.resultado {
+    width: 100%;
+    padding: 40px;
+    background-color: #ffffff;
+    text-align: right;
+    font-size: 30px;
+    border-bottom: 2px solid #ccc;
+    box-shadow: inset 0 -1px 0 #ccc;
+    margin-bottom: 20px;
+}
+
+.operacao, .numeros{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+button{
+    font-size: 24px;
+    padding: 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: backgroud-color 0.2s;    
+}
+
+.igual{
+    background-color: #3c6bd6;
+    color: #fff;
+}
+
+button.operacao{
+    background-color: #808080;;
+}
+
+button.apagar{
+    background-color: #d94d4d;
+}
+
+button.apagar:hover{
+    transform: scale(1.05); 
+}
+
+button.igual:hover{
+    transform: scale(1.05); 
+}
+
+.numeros button:not(.apagar, .igual):hover, 
+.operacao button:hover {
+    background-color: #bbbbbb;
+    transform: scale(1.05); 
+}
+
+@media (max-width: 1080px) and (max-height: 425px) {
+    main {
+        width: 90%; 
+        max-width: 350px; 
+    }
+    
+    .resultado {
+        padding: 20px; 
+        font-size: 24px; 
+    }
+    
+    .operacao, .numeros {
+        gap: 8px; 
+        padding: 10px; 
+    }
+
+    button {
+        font-size: 20px; 
+        padding: 20px; 
+    }
+}
+
+
+
+
