@@ -29,9 +29,24 @@ function calcular() {
 
     resultado.textContent = resultados;
     numeroAnterior = resultados.toString();  // Para continuar o cálculo
-    numeroAtual = '';
+    numeroAtual = resultados;
     operacao = '';
 }
+
+operacoes.forEach(function (botao) {
+    botao.addEventListener('click', function () {
+        if (numeroAtual !== '') {
+            if (numeroAnterior === '') {
+                numeroAnterior = numeroAtual;
+            } else {
+                calcular();
+            }
+            operacao = botao.textContent;
+            resultado.textContent += ' ' + operacao + ' ';
+            numeroAtual = '';
+        }
+    });
+});
 
 numeros.forEach(function (botao) {
     botao.addEventListener('click', function () {
@@ -44,28 +59,15 @@ numeros.forEach(function (botao) {
         } else if (botao.classList.contains('ponto')) {
             if (!numeroAtual.includes('.')) {
                 numeroAtual += '.';
-                resultado.innerText = numeroAtual;
+                resultado.textContent += '.'; 
             }
         } else {
             numeroAtual += botao.textContent;
-            resultado.textContent = numeroAtual;
+            resultado.textContent += botao.textContent;  
         }
     });
 });
 
-operacoes.forEach(function (botao) {
-    botao.addEventListener('click', function () {
-        if (numeroAtual !== '') {
-            if (numeroAnterior === '') {
-                numeroAnterior = numeroAtual;
-            } else {
-                calcular();
-            }
-            operacao = botao.textContent;
-            numeroAtual = '';
-        }
-    });
-});
 
 igual.addEventListener('click', function () {
     if (numeroAtual !== '' && numeroAnterior !== '') {
