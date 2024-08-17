@@ -59,11 +59,11 @@ numeros.forEach(function (botao) {
         } else if (botao.classList.contains('ponto')) {
             if (!numeroAtual.includes('.')) {
                 numeroAtual += '.';
-                resultado.textContent += '.'; 
+                resultado.textContent += '.';
             }
         } else {
             numeroAtual += botao.textContent;
-            resultado.textContent += botao.textContent;  
+            resultado.textContent += botao.textContent;
         }
     });
 });
