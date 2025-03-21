@@ -17,4 +17,12 @@ Este projeto consiste em uma calculadora simples desenvolvida utilizando **HTML,
 
 ## 🚀 Como Executar o Projeto
 1. Clone este repositório:
-   git clone https://github.com/seu-usuario/calculadora.git
+   git clone https://github.com/DarkianeLG/calculadora.git
+
+2. Acesse a pasta do projeto:
+   Cd calculadora
+
+3. Abra o arquivo index.html em um navegador.
+
+## 📱 Responsividade
+A calculadora se adapta a diferentes tamanhos de tela, garantindo uma boa experiência em dispositivos móveis e desktops.
